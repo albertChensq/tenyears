@@ -1,0 +1,54 @@
+
+.d-title{
+	height: 40px;
+	line-height: 40px;
+	background: #06C3E3;
+	color: white;
+	margin-left: 5px;
+	text-align: center;
+}
+
+
+#postpic .modal-dialog{
+	width:620px;
+}
+#postpic .modal-content{
+	width: 600px; height: 450px;
+}
+#postpic .uploadPic-wrap{
+	width: 550px;
+}
+#postpic #tyPicUploader{
+	width: 550px; height: 410px;
+}
+#postpic .tyPicUploader-picWrap{
+	height: 250px;
+}
+#postpic .tyPicUploader-preview{
+	width: 502px;
+}
+#postpic .tyPicUploader-tip{
+	top: 190px;
+	left: 215px;
+}
+#postpic .tyPicUploader-camera{
+	top: 140px;
+	left: 230px;
+}
+#postpic .tyPicUploader-tipWraper{
+	width:500px;
+	height: 330px;
+}
+#postpic .tyPicUploader-loading {
+    position: absolute;
+    top: 160px;
+    left: 245px;
+}
+.pic-del{
+	position: absolute;
+	top:6px;
+	display: none;
+	left: 193px;
+	cursor: pointer;
+	background: rgba(196,196,196,0.5);
+}

@@ -1,0 +1,461 @@
+<extend name="Public:base" />
+
+<block name="head">
+    <meta name="Keywords" Content="梦想,人生,未来,计划,时间轴,迷茫,10years">
+    <meta name="Description" Content="基于未来时间轴的梦想社交网络，让年轻人分享想法与思考，基于梦想进行深度交流。人们可以计划规划自己10years后的未来人生，制定关于未来的计划，并寻求别人的建议，细分自己的未来时间表，对别人进行指导。">
+    <title>我的未来-十年后</title>
+    <link href="__PUBLIC__/static/img/favicon.ico" rel="shortcut icon">
+    <link href="__PUBLIC__/static/css/user.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/static/css/elastislide.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="__PUBLIC__/static/css/custom.css" /> -->
+    <link href="__PUBLIC__/static/css/user.my.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/static/css/daterangepicker-bs3.css" rel="stylesheet" type="text/css">
+    <script src="__PUBLIC__/static/js/zh_cn.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/static/js/modernizr.custom.17475.js"></script>
+    <script src='__PUBLIC__/static/js/baiduTemplate.js' type='text/javascript' ></script>
+</block>
+
+<block name="main">
+    <notempty name="Think.session.users.id">
+        <input type="hidden" value="true" id="isLogin">
+    <else />
+        <input type="hidden" value="false" id="isLogin">        
+    </notempty>
+
+    <input type="hidden" value="1" id="isOwner">
+    <input type="hidden" value="{$Think.session.users.id}" name="current-userid" id="curid">
+    <input type="hidden" value="{$Think.session.users.nickname}" name="current-username" id="curname">
+    <input type="hidden" value="{$Think.session.users.headpic}" name="current-userpic" id="curpic">
+    <input type="hidden" value="{$owner.nickname}" name="ownername" id="ownername">
+    <input type="hidden" value="{$followlist}" name="followlist">
+    <div id="content" class="owner">
+        <input type="hidden" value="{$owner.id}" id="ownerid">
+        <input type="hidden" value="true" id="isUserLogin">
+        <!-- <input type="hidden" value="1" id="userAge"> -->
+        <div id="top" class="shadow">
+            <div class="info-name-wrap">
+                <span id="info-name">{$owner.nickname}</span>
+                <ul class="count">
+                    <li class="dream-count"><span class="count-type">梦想</span></br><span class="total">{$dream_num}</span></li>
+                    <li class="mood-count"><span class="count-type">想法</span></br><span class="total">{$dmidea_num}</span></li>
+                    <li class="pic-count"><span class="count-type">图片</span></br><span class="total">{$dmpic_num}</span></li>
+                    <li class="answer-count"><span class="count-type">钦佩</span></br><span class="total">{$admire_num}</span></li>
+                </ul>
+            </div>
+            <div id="photo-box">
+                <div id="photo" class="user-photo">
+                    <img src="__PUBLIC__/static/uploads/{$owner.headpic}" class="headpic-user">
+                </div>
+            </div>
+            <ul id="info-box" class="list-unstyled">
+                <li id="info-follow-wrap">
+                    <!-- 判断当前登录用户是否是所属者 -->
+                    <neq name = "Think.session.users.id" value = "$owner.id"> 
+                        <in name="owner.id" value="$followlist">
+                          <button class="ru-follow btn-follow hide" user-id="{$owner.id}">关注</button>
+                          <button class="ru-del-follow btn-del-follow" user-id="{$owner.id}">取消</button>
+                        <else />
+                          <button class="ru-follow btn-follow" user-id="{$owner.id}">关注</button>
+                          <button class="ru-del-follow btn-del-follow hide" user-id="{$owner.id}">取消</button>
+                        </in>  
+                        <button class="btn-chat" user-id="{$owner.id}"><i class="icon icon-chat"></i><div class="btn-chat-desc">私信</div></button>
+                    </neq>
+                </li>
+                <li id="info-city"><i class="icon icon-location"></i>{$owner.address}<i class="divider"></i><span id="info-age" class="age-male">{$owner.age}岁</span>
+                </li>
+                <li id="info-current"><i class="icon icon-now">现在是</i><span>{$owner.current_desc}</span></li>
+                <li id="info-future"><i class="icon icon-want">想成为</i><span>{$owner.future_desc}</span></li>              
+            </ul>
+        </div>
+        <!-- 所有梦想标题 -->
+        <div class="container demo-1">
+            <div class="main demo-1" style="width:1000px">
+                <ul id="carousel" class="elastislide-list">
+                    <foreach name="dreamlist" item="dm">
+                        <li>
+                            <a href="__MODULE__/user/index/id/{$owner.id}/did/{$dm.id}" did="{$dm.id}">
+                                <!-- <div class="d-title">{$dm.title}</div> -->
+                                <img src="__PUBLIC__/static/uploads/{$dm.dmpic}" width="297px" height="40px">
+                            </a>
+                        </li>
+                    </foreach>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slider-content">
+            
+            <i class="icon icon-arrow-up slider-content-arrow"></i>
+            <div class="slider-dream-info">
+                <div class="dream-info-title-box">
+                    <span class="dream-info-title">「梦想」屋</span>
+                    
+                    <eq name="Think.session.users.id" value="$owner.id">
+                        <button class="btn btn-blue adddream" id="btn-adddream">筑梦</button>
+                    </eq>    
+                </div>
+            <notempty name="curdream">
+                <div class="dream-info-detail-box" dream-id="{$curdream.id}">
+                    <ul class="list-unstyled">
+                        <li>
+                            <span class="dream-info-label">名称</span>
+                            <div class="dream-info-value dream-info-name">{$curdream.title}</div>
+                        </li>
+                        <li>
+                            <span class="dream-info-label">描述</span>
+                            <div class="dream-info-value dream-info-desc">{$curdream.dmdesc}</div>
+                        </li>
+                        <li>
+                            <span class="dream-info-label">时点</span>
+                            <div class="dream-info-value dream-info-deadline">{$curdream.deadline|date="Y-m-d",###}</div>
+                        </li>
+                    </ul>
+                    <eq name="Think.session.users.id" value="$owner.id">
+                        <div class="dream-info-actions ty-dropdown">
+                            <i class="icon icon-dropdown-big"></i>
+                            <ul class="list-unstyled">
+                                <li class="option dream-info-delete" dreamid="{$curdream.id}"><i class="icon icon-trash"></i>删除梦想</li>
+                            </ul>
+                        </div>
+                    </eq>
+                </div>
+            </notempty>
+            </div>
+
+            <notempty name="curdream">
+            <div class="slider-dream-main">
+                <ul class="title-box list-inline" role="tablist">
+                    <li class="active tab-pic dream-tab"><a href="#main-pic" role="tab" data-toggle="tab">相册</a></li>
+                    <li class="unactive tab-road dream-tab"><a href="#main-mood" role="tab" data-toggle="tab">想法</a></li>
+                    <li class="unactive tab-plan dream-tab hide"><a href="#main-timeline" role="tab" data-toggle="tab">计划</a></li>
+                </ul>
+                <div class="tab-content">
+
+                    <!-- 想法模块 -->
+                    <div class="tab-pane main-mood fade" id="main-mood">
+                        <eq name = "Think.session.users.id" value = "$owner.id">
+                        <div class="add-item-box">                                                 
+                            <ul class="list-inline">
+                                <li><a href="javascript:void(0)" class="add-mood-link"><i class="icon icon-mood"></i><span>分享想法</span></a></li>
+                            </ul>
+                            <form class="add-item-form" onsubmit="return false">
+                                <textarea style="overflow: hidden; word-wrap: break-word; resize: none; height: 53px;" class="form-control add-mood-input" name="content" placeholder="分享你关于梦想的思考！" rows="2"></textarea>
+                                <div class="submit-button-wraper">
+                                    <input class="btn btn-red addMoodButton" value="记录" type="submit" did="{$curdream.id}">
+                                </div>
+                            </form>
+                        </div>
+                        </eq> 
+
+                        <!-- 遍历当前梦想的想法 -->
+                    <notempty name="moodlist">
+                    <foreach name="moodlist" item="mood">
+                        <div class="item item-mood">
+                            <div class="item-icon">
+                                <i class="icon icon-circle"></i>
+                                <i class="icon icon-mood"></i>
+                                <!--<i class="item-line"></i>-->
+                            </div>
+                            <div class="item-content">
+                                <i class="icon icon-arrow-left"></i>
+                                <div class="item-content-top-wraper">
+                                    <div class="item-content-top-box">
+                                        <!-- 删除按钮 -->
+                                        <eq name = "Think.session.users.id" value = "$owner.id">
+                                        <i class="icon icon-close action-delete mood-delete" mid="{$mood.id}"></i>
+                                        </eq>
+                                        
+                                        <!-- 想法内容 -->
+                                        <div class="item-mood-detail">
+                                            <i class="icon icon-leftbracket"></i>
+                                            <span class="item-mood-content">{$mood.content}</span>
+                                            <i class="icon icon-rightbracket"></i>
+                                        </div>
+                                        
+                                        <!-- 操作栏 -->
+                                        <div class="actions-wrap reply-collapse" iid="{$mood.id}" status="close">
+                                            <span class="item-date">{$mood.posttime|date="m-d H:i",###}</span>
+                                            <div class="item-actions">
+                                                <!-- 点赞数 -->
+                                                <span class="item-action-like item-action" iid="{$mood.id}" type="moodlike">
+                                                    <i class="icon icon-unlike"></i>
+                                                    <span class="like-times">{$mood.admirenum}</span>
+                                                </span>
+
+                                                <!-- 回复数 -->
+                                                <span item-type="mood" item-id="28" class="item-action-reply item-action">
+                                                    <i class="icon icon-reply"></i>
+                                                    <span class="reply-times">{$mood.replynum}</span>
+                                                    <i class="icon icon-arrow-up2 hide"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div id="reply-mood" class="collapse replys-wrap reply-block">
+                                            <textarea style="overflow: hidden; word-wrap: break-word; resize: none; height:30px;width:530px" placeholder="在这里讨论" class="reply-input form-control"></textarea>
+                                            <div class="reply-button">
+                                                <a href="javascript:void(0)" class="reply-cancel-link ty-link">取消</a>
+                                                <button iid="{$mood.id}" submit-type="mood" disabled="disabled" class="btn btn-green2 ty-button btn-reply">评论</button>
+                                            </div>
+
+                                            <!-- 回复遍历 -->
+                                            <div class="replys">
+                                                
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreach>
+                    <else />
+                        <div class="no-road">该梦想还没有记录</div>
+                    </notempty>
+                    </div>
+
+                    <!-- 相册模块 -->
+                    <div class="tab-pane main-pic fade in active" id="main-pic">
+                        <div id="masonry" class="container-fluid" style="margin-top:10px;">
+                        <eq name="Think.session.users.id" value="$owner.id">
+                            <div class="col-sm-6 col-md-4 pic-box" style="float:left;cursor:pointer">
+                                <div class="thumbnail" id="add-pic" did="$curdream.id">
+                                    <img src="__PUBLIC__/static/img/addpic.jpg">
+                                    <div class="caption" style="text-align:center">
+                                        <h4>添加图片</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </eq>
+                        <foreach name="piclist" item="pic">
+                            <div class="col-sm-6 col-md-4 pic-box" style="float:left">
+                            <eq name = "Think.session.users.id" value = "$owner.id">
+                                <span class="glyphicon glyphicon-remove pic-del" pid="{$pic.id}"></span>
+                            </eq>
+                                <div class="thumbnail">
+                                    <img src="__PUBLIC__/static/uploads/{$pic.pic}">
+                                    <div class="caption">
+                                        <p>{$pic.content}</p>
+                                        <span class="item-action-like item-action" pid="{$pic.id}" style="top:10px;left:145px" type="piclike">
+                                            <i class="icon icon-unlike"></i>
+                                            <span class="like-times">{$pic.admirenum}</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </foreach>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <else />
+                <div class="no-info">他还没有创建梦想</div>
+            </notempty>
+           
+        </div>
+        <!-- </div> -->
+    </div><!-- 上半部分个人信息终点 -->
+    
+    <!-- replytpl -->
+        <script id="t:replytpl" type="text/html">
+            <div class="reply">
+                <a href="javascript:void(0)">
+                    <img src="__PUBLIC__/static/uploads/<%=headpic%>" class="headpic-reply">
+                </a>
+                <span class="reply-content">
+                    <a class="ty-link" target="_blank" href="__MODULE__/user/index/id/<%=uid%>"><%=nickname%></a>
+
+                <%
+                    var curidinput = document.getElementById('curid');
+                    var curid = curidinput.value;
+                    if(curid == uid){
+                %>
+                    <i replyid="<%=id%>" style="display:block" class="icon icon-close reply-delete"></i>
+                <%}%>
+                    <div class="reply-text"><%=content%></div>
+                    <div class="reply-actions-wrap">
+                        <span class="reply-time"><%=getLocalTime(posttime)%></span>
+                        <a href="javascript:void(0)" nickname="<%=nickname%>" userid="<%=uid%>" class="reply-link"><i class="icon icon-reply2"></i><span>回复</span></a>
+                    </div>
+                </span>
+            </div>
+        </script>
+
+
+
+
+    <div id="scroll-top" style="display:block"><i class="icon icon-top"></i></div>
+    
+    <!-- 添加梦想面板 -->
+    <div class="modal fade" id="add-dream-dialog" tabindex="-1" role="dialog" aria-labelledby="addDreamDialogLabel" aria-hidden="true">
+        <div class="modal-dialog tydialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <i class="icon icon-close-dialog"></i>
+                    </button>
+                    <h4 class="modal-title">添加「梦想」</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form" id="add-dream-form" onsubmit="return false">
+                        <div class="form-group">
+                            <label for="name" class="control-label">名称:</label>
+                            <div class="input">
+                                <input type="text" placeholder="你真正的一个梦想" class="form-control input-count" name="name" id="new-dream-name" min="1" max="24" chartype="2">
+                             </div>
+                            <div class="count hide">
+                                <span class="current-count">0</span>/12
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="control-label">描述:</label>
+                            <div class="input">
+                                <textarea placeholder="任何相关的信息，原因、畅想、秘密计划等" class="form-control input-count" name="description" id="new-dream-desc" min="1" max="240" chartype="2" rows="2"></textarea>
+                            </div>
+                            <div class="count hide">
+                                <span class="current-count">0</span>/120
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="add-deadline" class="control-label">时点:</label>
+                            <div class="input" id="new-dream-deadline">
+                                <div class="input-group" style="width:250px">
+                                    <div class="input-group-addon">
+                                        <i class="glyphicon glyphicon-th"></i>
+                                    </div>
+                                    <input type="text" style="width:200px" class="form-control" value="" id="add-deadline" name="add_deadline">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input id="add-dream-submit-btn" type="button" class="btn btn-primary w-btn" value="确定">
+                        </div>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+  
+
+    <!-- 私信发送窗口 -->
+    <div class="modal fade" id="sendmsg" tabindex="-1" role="dialog" aria-labelledby="sendmsgDialogLabel" aria-hidden="true">
+        <div class="modal-dialog tydialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <i class="icon icon-close-dialog"></i>
+                    </button>
+                    <h4 class="modal-title">发送信息</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form" id="add-dream-form" onsubmit="return false">
+                        <div class="form-group">
+                            <label for="description" class="control-label">内容:</label>
+                            <div class="input">
+                                <textarea placeholder="你要和他说的话" class="form-control input-count" name="description" id="msgcontent" min="1" max="240" chartype="2" rows="2"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input id="sendmsg-submit-btn" type="button" class="btn btn-primary w-btn" value="确定">
+                        </div>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+
+
+    <!-- 图片发布 -->
+    <div class="modal fade" id="postpic" tabindex="0" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="uploadPic-wrap">
+                        <div class="tyPicUploader tyPicUploader-right" id="tyPicUploader">
+                            <label class="tyPicUploader-tipWraper" for="tyPicUploader-file">
+                                <i class="icon tyPicUploader-camera"></i>
+                                <div class="tyPicUploader-tip">添加一张照片</div>
+                                <img src="__PUBLIC__/static/img/loading.gif" class="tyPicUploader-loading hide">
+                            </label>
+                            <div class="tyPicUploader-preview hide">
+                                <div class="tyPicUploader-picWrap">
+                                    <img src="" class="tyPicUploader-pic" style="max-width:500px;max-height:260px" name="pickname">
+                                    <i class="icon tyPicUploader-deletePic"></i>
+                                </div>
+                                <textarea class="form-control" rows="1" placeholder="写下对该照片的介绍" id="picdesc"></textarea>
+                            </div>
+                            <div class="tyPicUploader-actions">
+                                <button class="btn tyPicUploader-cancel" class="close" data-dismiss="modal" aria-hidden="true">取消</button>
+                                <div class="tyPicUploader-dropdown tyPicUploader-submit hide">
+                                    <button class="btn btn-red" id="btn-postpic" dream-id="{$curdream.id}">
+                                        <span class="btn-text">发布</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <iframe name="tyPicUploader-frame" id="tyPicUploader-frame" class="hide"></iframe>
+                            <form action="/tenyears/index.php/home/dmpics/upload" class="hide" method="post" enctype="multipart/form-data" target="tyPicUploader-frame" id="upload-form">
+                                <input name="postpic" id="tyPicUploader-file" type="file">
+                                <input type="submit" value="upload">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Confirm Dialog-->
+    <div class="modal fade" id="confirm-dialog" tabindex="0" role="dialog" aria-labelledby="confirmDialogLabel" aria-hidden="true">
+        <div class="modal-dialog tydialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <i class="icon icon-close-dialog"></i>
+                    </button>
+                    <h4 class="modal-title">确认</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="confirm-text">你确认要删除吗？</div>
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-primary w-btn confirm-submit-btn" value="确定">
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+</block>
+
+<block name="script">
+    <script src="__PUBLIC__/static/js/jquery.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/static/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/static/js/login.reg.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/static/js/moment.min.js" type="text/javascript" ></script>
+    <script src="__PUBLIC__/static/js/daterangepicker.js" type="text/javascript" ></script>
+    <script type="text/javascript" src="__PUBLIC__/static/js/masonry.min.js"></script>
+    <!-- 自定义js -->
+    <script src="__PUBLIC__/static/js/user.my.js" type="text/javascript"></script> 
+    <script type="text/javascript" src="__PUBLIC__/static/js/jquerypp.custom.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/static/js/jquery.elastislide.js"></script>
+    <script type="text/javascript">           
+        $( '#carousel' ).elastislide({
+            speed : 1000,
+            minItems : 3,
+            start : 0,
+        });
+        $(function(){
+            var $container = $('#masonry');
+            $container.imagesLoaded( function(){
+                $container.masonry({
+                    itemSelector : '.pic-box',
+                    gutterWidth : 0,
+                    isAnimated: true,
+                });
+            });
+        });
+    </script>   
+</block>

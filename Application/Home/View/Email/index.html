@@ -1,0 +1,240 @@
+<extend name="Public:base" />
+
+<block name="head">
+	<meta name="Description" Content="基于未来时间轴的梦想社交网络，让年轻人分享想法与思考，基于梦想进行深度交流。人们可以计划规划自己10years后的未来人生，制定关于未来的计划，并寻求别人的建议，细分自己的未来时间表，对别人进行指导。">
+	<meta name="keyword" content="十年后 10years">
+	<title>发现-十年后</title>
+	<link href="__PUBLIC__/static/img/favicon.ico" rel="shortcut icon">
+	<link href="__PUBLIC__/static/css/email.min.css" rel="stylesheet" type="text/css" />
+	<script src="__PUBLIC__/static/js/zh_cn.js" type="text/javascript"></script>
+</block>
+<block name="main">
+	<div style="min-height: 551px;" id="content" class="main auto-resize shadow">
+
+		<!-- 导航信息 -->
+		<ul class="title-box list-inline " role="tablist">
+			<li class="notification-type active" id="notification-message" type="message">
+				<a href="#permessage" role="tab" data-toggle="tab">收信箱</a>
+				<i count="0" class="hide icon icon-redPoint"></i>
+			</li>
+			<li class="unactive notification-type" id="notification-message" type="friend">
+				<a href="#publicmessage" role="tab" data-toggle="tab">发信箱</a>
+				<i count="0" class=" hide icon icon-redPoint"></i>
+			</li>
+			<li class="unactive notification-type " id="notification-question" type="question">
+				<a href="#sendmessage" role="tab" data-toggle="tab">公共信息</a>
+				<i count="0" class=" hide icon icon-redPoint"></i>
+			</li>
+		</ul>
+
+		<!-- 内容信息 -->
+		<div class=" tab-content">
+			<!-- 收信箱 -->
+			<div class="tab-pane active" id="permessage">
+				<div id="notification-list" >
+			        <ul class="notification-list " id="notification-list-question">
+			        	<foreach name="revemails" item="vo">
+				        	<li viewed="true" time="2014-08-07 09:43:30" operationtype="REPLY" itemtype="QUESTION" itemid="473" class="notification">
+					       		<div class="notification-img"><img class="message-img" src="__PUBLIC__/static/uploads/{$vo.headpic}" alt="">
+					       		</div>
+						        	<div class="notification-detail">
+							        	<div class="notification-description">
+							        		<a href="/user/7668" class="from-username ty-link">{$vo.nickname}</a> 对你说
+							        	「<a href="javascript:void(0)" class="ty-link notification-content">{$vo.content}</a>」
+							        	</div>
+						        		<div class="notification-date">
+						        			{$vo.posttime|date="Y-m-d H:i:s",###}
+						        			<a href="javascript:void(0)" emailid ="{$vo.suid}" class="email-reply"><i class="icon icon-reply2"></i><span>回复</span></a>
+						        			<a href="javascript:void(0)" emailid="{$vo.id}" class="email-del" type="rev-email"><i class="icon icon-close1"></i><span>删除</span></a>
+						        		</div>
+						        		
+						        	</div>
+						        	<eq name="vo.status" value="0">
+						        		<span id="cancel-status-btn" class="notification-tip" emailid="{$vo.id}">点击标为已读</span>
+						        	</eq>
+					        		
+					        	<div>
+					        		<span class=" notification-empty hide" id="notification-friend-empty" >对您的私人信息将出现在这里</span>
+					        	</div>
+				        	</li>
+			        	</foreach>
+			        <!-- </foreach> -->
+			        </ul>
+
+			    </div>
+
+			</div> <!-- end 收信箱 -->
+			
+			<!-- 发信箱 -->
+			<div class="tab-pane" id="publicmessage">
+					<button class="btn btn-question" id="email-send" type="button">
+                		<span class="email-label">发信息</span>
+            		</button>
+				<div id="notification-list" >
+			        <ul class="notification-list " id="notification-list-question">
+			        <foreach  name="sendemails" item="vo">
+			        	<li viewed="true" time="2014-08-07 09:43:30" operationtype="REPLY" itemtype="QUESTION" itemid="473" class="notification">
+				       		<div class="notification-img">
+				       			<img class="message-img" src="__PUBLIC__/static/uploads/{$headpic}">
+				       		</div>
+				        	<div class="notification-detail">
+					        	<div class="notification-description">
+					        	你对<a href="/user/7668" class="from-username ty-link">{$vo.nickname}</a> 
+					        		说
+					        	「<a href="javascript:void(0)" class="ty-link notification-content">{$vo.content}</a>」
+					        	</div>
+				        		<div class="notification-date">
+				        			{$vo.posttime|date="Y-m-d H:i:s",###}
+				        			<a href="javascript:void(0)" emailid="{$vo.id}" class="email-del" type="send-email"><i class="icon icon-close1"></i><span>删除</span></a>
+					        	</div>
+				        	</div>
+				        	<div>
+				        		<span class=" notification-empty hide" id="notification-friend-empty" >对您的私人信息将出现在这里</span>
+				        	</div>
+			        	</li>
+			        </foreach>
+			        </ul>
+			    </div>
+			</div>   <!-- end  发信箱 -->
+
+			<!--公共信息 -->
+			<div class="tab-pane" id="sendmessage">
+				<div id="notification-list" >
+			        <ul class="notification-list " id="notification-list-question">
+			        	<foreach name="messages" item="vo">
+			        	<li viewed="true"  class="notification">
+				       		<div class="notification-img">
+				       			<img class="message-img" src="__PUBLIC__/static/uploads/headpic.jpg" alt="">
+				       		</div>
+				        	<div class="notification-detail">
+					        	<div class="notification-description">
+					       			<a href="javascript:void(0)" class="from-username ty-link">管理员</a> 
+					        		给你发送了一条系统信息
+					        	「<a id="message-content"href="javascript:void(0)" class="ty-link notification-content">{$vo.content}</a>」
+					        	</div>
+				        		<div class="notification-date">
+				        			{$vo.posttime|date="Y-m-d H:i:s",###}
+				        		</div>
+				        	</div>
+				        	<span id="sys-message-already" class="notification-tip">点击标为已读</span>
+				        	<div>
+				        		<span class=" notification-empty hide" id="notification-friend-empty" >对您的私人信息将出现在这里</span>
+				        	</div>
+			        	</li>
+			        	</foreach>
+			        </ul>
+			    </div>
+			</div>   <!-- end  公共信息 -->
+		</div>   <!--  end tab-content  -->
+	</div>  <!-- main auto-resize shadow -->
+
+	<!-- 回复弹窗 -->
+    <div class="modal fade" id="add-reply-dialog" tabindex="-1" role="dialog" aria-labelledby="addDreamDialogLabel" aria-hidden="true">
+        <div class="modal-dialog tydialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <i class="icon icon-close-dialog"></i>
+                    </button>
+                    <h4 class="modal-title">「回复」</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form" id="add-dream-form" onsubmit="return false">
+                        <div class="form-group">
+                            <label for="description" class="control-label-email">内容:</label>
+                            <div class="input">
+                                <textarea id="revcontent" class="form-control input-count" name="description" cols="40"></textarea>
+                            </div>
+                            <div class="count hide">
+                                <span class="current-count">0</span>/120
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input id="email-btn" type="button" class="btn btn-primary w-btn" value="确定">
+                        </div>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <!-- 删除弹窗-->
+	<div class="modal fade" id="confirm-email-del" tabindex="0" role="dialog" aria-labelledby="confirmDialogLabel" aria-hidden="true">
+		<div class="modal-dialog tydialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="icon icon-close-dialog"></i>
+					</button>
+					<h4 class="modal-title">确认</h4>
+				</div>
+				<div class="modal-body">
+					<div class="confirm-text">您确定要删除该信息吗？</div>
+					<div class="modal-footer">
+						<input type="submit" class="btn btn-primary w-btn confirm-submit-btn" id="email-del-btn"value="确定">
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<!-- 发信箱弹窗 -->
+    <div class="modal fade" id="send-email-dialog" tabindex="-1" role="dialog" aria-labelledby="addDreamDialogLabel" aria-hidden="true">
+        <div class="modal-dialog tydialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <i class="icon icon-close-dialog"></i>
+                    </button>
+                    <h4 class="modal-title">「发信息」</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form" id="add-dream-form" onsubmit="return false">
+                        <div class="form-group">
+                            <label for="name" class="control-label-email">昵称:</label>
+                            <div class="input">
+                                <input type="text" placeholder="昵称" class="form-control input-count" id="nickname" min="1" max="24" chartype="2" >
+                               <div class="tooltip fade right in hide" style="top: 27px; left:270px; display: block;">
+									<div class="tooltip-arrow"></div>
+    								<div class="tooltip-inner">昵称不存在</div>
+								</div>
+								 <div id="sendmyself" class="tooltip fade right in hide" style="top: 27px; left:270px; display: block;">
+									<div class="tooltip-arrow"></div>
+    								<div class="tooltip-inner">不能给自己发信息</div>
+								</div>
+                             </div>
+                            <div class="count hide">
+                                <span class="current-count">0</span>/12
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="control-label-email">内容:</label>
+                            <div class="input">
+                                <textarea id = "sendcontent" class="form-control placeholder="发送内容" input-count" name="description" cols="40"></textarea>
+                            </div>
+                            <div class="count hide">
+                                <span class="current-count">0</span>/120
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input id="send-email-btn" type="button" disabled="disabled" class="btn btn-primary w-btn" value="确定">
+                        </div>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</block>
+
+<block name="script">
+	<script src='__PUBLIC__/static/js/jquery.js' type='text/javascript' ></script>
+	<script src='__PUBLIC__/static/js/bootstrap.min.js' type='text/javascript' ></script>
+	<script src='__PUBLIC__/static/js/login.reg.js' type='text/javascript' ></script>
+	<script src='__PUBLIC__/static/js/email.add.js' type='text/javascript' ></script>
+	<script src='__PUBLIC__/static/js/email.del.js' type='text/javascript' ></script>
+	<script src='__PUBLIC__/static/js/email.send.js' type='text/javascript' ></script>
+	<script src='__PUBLIC__/static/js/email.mod.js' type='text/javascript' ></script>
+	<script src='__PUBLIC__/static/js/email.message.js' type='text/javascript' ></script>
+</block>

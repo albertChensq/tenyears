@@ -1,0 +1,532 @@
+[ 2017-09-09T13:14:25+08:00 ] ::1 /tenyears/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001942s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002084s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_web [ RunTime:0.052199s ]
+SQL: SELECT * FROM `ten_web`  [ RunTime:0.001067s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000227s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000302s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057159s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057258s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.010303s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010363s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000828s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000872s ]
+
+[ 2017-09-09T13:14:38+08:00 ] ::1 /tenyears/index.php/home/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000285s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_users [ RunTime:0.081311s ]
+SQL: SELECT * FROM `ten_users` WHERE ( `email` = 'admin' ) AND ( `userpwd` = '21232f297a57a5a743894a0e4a801fc3' )  [ RunTime:0.000564s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000465s ]
+
+[ 2017-09-09T13:14:45+08:00 ] ::1 /tenyears/index.php/home/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_users [ RunTime:0.007527s ]
+SQL: SELECT * FROM `ten_users` WHERE ( `email` = 'admin@admin.me' ) AND ( `userpwd` = '21232f297a57a5a743894a0e4a801fc3' )  [ RunTime:0.000286s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000406s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000433s ]
+
+[ 2017-09-09T13:14:51+08:00 ] ::1 /tenyears/index.php/home/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000284s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_users [ RunTime:0.007134s ]
+SQL: SELECT * FROM `ten_users` WHERE ( `email` = 'admin@admin.me' ) AND ( `userpwd` = 'e10adc3949ba59abbe56e057f20f883e' )  [ RunTime:0.000368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000478s ]
+
+[ 2017-09-09T13:14:51+08:00 ] ::1 /tenyears/index.php/home/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000292s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+
+[ 2017-09-09T13:14:57+08:00 ] ::1 /tenyears/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000304s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_web [ RunTime:0.027854s ]
+SQL: SELECT * FROM `ten_web`  [ RunTime:0.000934s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000284s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000358s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016716s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000724s ]
+
+[ 2017-09-09T13:15:05+08:00 ] ::1 /tenyears/index.php/home/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+
+[ 2017-09-09T13:15:10+08:00 ] ::1 /tenyears/index.php/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000513s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_web [ RunTime:0.025399s ]
+SQL: SELECT * FROM `ten_web`  [ RunTime:0.000870s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020314s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020391s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+
+[ 2017-09-09T13:16:18+08:00 ] ::1 /tenyears/index.php/home/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000277s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_users [ RunTime:0.025205s ]
+SQL: SELECT * FROM `ten_users` WHERE ( `email` = 'admin@admin.me' ) AND ( `userpwd` = 'e10adc3949ba59abbe56e057f20f883e' )  [ RunTime:0.000343s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000736s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000767s ]
+
+[ 2017-09-09T13:16:19+08:00 ] ::1 /tenyears/index.php/home/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 12 行.
+SQL: DESCRIBE ten_users [ RunTime:0.009629s ]
+SQL: SELECT * FROM `ten_users` WHERE ( id='' ) LIMIT 1   [ RunTime:0.057482s ]
+SQL: DESCRIBE ten_dreams [ RunTime:0.085849s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ten_dreams` WHERE ( uid='' ) LIMIT 1   [ RunTime:0.065223s ]
+SQL: DESCRIBE ten_dmideas [ RunTime:0.024682s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ten_dmideas` WHERE ( uid='' ) LIMIT 1   [ RunTime:0.011655s ]
+SQL: DESCRIBE ten_dmpics [ RunTime:0.051858s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ten_dmpics` WHERE ( uid='' ) LIMIT 1   [ RunTime:0.026827s ]
+SQL: SELECT `admirenum` FROM `ten_dreams` WHERE ( uid='' and admirenum > 0 )  [ RunTime:0.000652s ]
+SQL: SELECT `admirenum` FROM `ten_dmideas` WHERE ( uid='' and admirenum > 0 )  [ RunTime:0.000549s ]
+SQL: SELECT `admirenum` FROM `ten_dmpics` WHERE ( uid='' and admirenum > 0 )  [ RunTime:0.000617s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 43 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 46 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 49 行.
+SQL: SELECT * FROM `ten_dreams` WHERE ( uid='' ) ORDER BY id desc  [ RunTime:0.001195s ]
+SQL: DESCRIBE ten_follow [ RunTime:0.051105s ]
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 60 行.
+SQL: SELECT `followed` FROM `ten_follow` WHERE ( followers='' )  [ RunTime:0.001258s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 61 行.
+NOTIC: [8] Undefined variable: flist D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 64 行.
+SQL: SELECT * FROM `ten_dreams` WHERE ( uid='' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000722s ]
+SQL: SELECT * FROM `ten_dmpics` WHERE ( did='' ) ORDER BY id desc  [ RunTime:0.000633s ]
+SQL: SELECT * FROM `ten_dmideas` WHERE ( did='' ) ORDER BY id desc  [ RunTime:0.000537s ]
+SQL: DESCRIBE ten_ideacomments [ RunTime:0.042491s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ten_ideacomments` WHERE ( 13 = ten_ideacomments.iid ) LIMIT 1   [ RunTime:0.007109s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000209s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 283 行.
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 284 行.
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 285 行.
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 310 行.
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 344 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048042s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000306s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000336s ]
+
+[ 2017-09-09T13:22:19+08:00 ] ::1 /tenyears/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_web [ RunTime:0.025937s ]
+SQL: SELECT * FROM `ten_web`  [ RunTime:0.000887s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035944s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036035s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000816s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000879s ]
+
+[ 2017-09-09T13:25:24+08:00 ] ::1 /tenyears/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_web [ RunTime:0.007619s ]
+SQL: SELECT * FROM `ten_web`  [ RunTime:0.000230s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006065s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000175s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000310s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000333s ]
+
+[ 2017-09-09T13:25:37+08:00 ] ::1 /tenyears/index.php/home/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_users [ RunTime:0.013780s ]
+SQL: SELECT * FROM `ten_users` WHERE ( `email` = 'admin@admin.me' ) AND ( `userpwd` = 'e10adc3949ba59abbe56e057f20f883e' )  [ RunTime:0.000703s ]
+
+[ 2017-09-09T13:25:39+08:00 ] ::1 /tenyears/index.php/home/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000305s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_users [ RunTime:0.018651s ]
+SQL: SELECT * FROM `ten_users` WHERE ( `email` = 'admin@admin.me' ) AND ( `userpwd` = 'e10adc3949ba59abbe56e057f20f883e' )  [ RunTime:0.000701s ]
+
+[ 2017-09-09T13:25:41+08:00 ] ::1 /tenyears/index.php/home/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_users [ RunTime:0.008930s ]
+SQL: SELECT * FROM `ten_users` WHERE ( `email` = 'admin@admin.me' ) AND ( `userpwd` = 'e10adc3949ba59abbe56e057f20f883e' )  [ RunTime:0.000470s ]
+
+[ 2017-09-09T13:25:53+08:00 ] ::1 /tenyears/index.php/home/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_users [ RunTime:0.030533s ]
+SQL: SELECT * FROM `ten_users` WHERE ( `email` = 'admin@admin.me' ) AND ( `userpwd` = 'e10adc3949ba59abbe56e057f20f883e' )  [ RunTime:0.000469s ]
+
+[ 2017-09-09T13:27:13+08:00 ] ::1 /tenyears/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_web [ RunTime:0.012043s ]
+SQL: SELECT * FROM `ten_web`  [ RunTime:0.000434s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000196s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000271s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011979s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012048s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000618s ]
+
+[ 2017-09-09T13:27:21+08:00 ] ::1 /tenyears/index.php/home/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_users [ RunTime:0.007875s ]
+SQL: SELECT * FROM `ten_users` WHERE ( `email` = 'admin@admin.me' ) AND ( `userpwd` = 'e10adc3949ba59abbe56e057f20f883e' )  [ RunTime:0.000331s ]
+
+[ 2017-09-09T13:27:45+08:00 ] ::1 /tenyears/index.php/home/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_users [ RunTime:0.008143s ]
+SQL: SELECT * FROM `ten_users` WHERE ( `email` = 'admin@admin.me' ) AND ( `userpwd` = 'e10adc3949ba59abbe56e057f20f883e' )  [ RunTime:0.000351s ]
+
+[ 2017-09-09T13:28:01+08:00 ] ::1 /tenyears/index.php/home/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_users [ RunTime:0.007326s ]
+SQL: SELECT * FROM `ten_users` WHERE ( `email` = 'admin@admin.me' ) AND ( `userpwd` = 'e10adc3949ba59abbe56e057f20f883e' )  [ RunTime:0.000270s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000443s ]
+
+[ 2017-09-09T13:28:02+08:00 ] ::1 /tenyears/index.php/home/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000300s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 12 行.
+SQL: DESCRIBE ten_users [ RunTime:0.010638s ]
+SQL: SELECT * FROM `ten_users` WHERE ( id='' ) LIMIT 1   [ RunTime:0.000567s ]
+SQL: DESCRIBE ten_dreams [ RunTime:0.010452s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ten_dreams` WHERE ( uid='' ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: DESCRIBE ten_dmideas [ RunTime:0.007746s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ten_dmideas` WHERE ( uid='' ) LIMIT 1   [ RunTime:0.000291s ]
+SQL: DESCRIBE ten_dmpics [ RunTime:0.007419s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ten_dmpics` WHERE ( uid='' ) LIMIT 1   [ RunTime:0.000314s ]
+SQL: SELECT `admirenum` FROM `ten_dreams` WHERE ( uid='' and admirenum > 0 )  [ RunTime:0.000242s ]
+SQL: SELECT `admirenum` FROM `ten_dmideas` WHERE ( uid='' and admirenum > 0 )  [ RunTime:0.000207s ]
+SQL: SELECT `admirenum` FROM `ten_dmpics` WHERE ( uid='' and admirenum > 0 )  [ RunTime:0.000211s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 43 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 46 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 49 行.
+SQL: SELECT * FROM `ten_dreams` WHERE ( uid='' ) ORDER BY id desc  [ RunTime:0.000255s ]
+SQL: DESCRIBE ten_follow [ RunTime:0.009360s ]
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 60 行.
+SQL: SELECT `followed` FROM `ten_follow` WHERE ( followers='' )  [ RunTime:0.000294s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 61 行.
+NOTIC: [8] Undefined variable: flist D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 64 行.
+SQL: SELECT * FROM `ten_dreams` WHERE ( uid='' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000307s ]
+SQL: SELECT * FROM `ten_dmpics` WHERE ( did='' ) ORDER BY id desc  [ RunTime:0.000278s ]
+SQL: SELECT * FROM `ten_dmideas` WHERE ( did='' ) ORDER BY id desc  [ RunTime:0.000222s ]
+SQL: DESCRIBE ten_ideacomments [ RunTime:0.008221s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ten_ideacomments` WHERE ( 13 = ten_ideacomments.iid ) LIMIT 1   [ RunTime:0.000302s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000246s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 283 行.
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 284 行.
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 285 行.
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 310 行.
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 344 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036930s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036963s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000203s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000363s ]
+
+[ 2017-09-09T13:28:40+08:00 ] ::1 /tenyears/index.php/home/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001042s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 12 行.
+
+[ 2017-09-09T13:29:41+08:00 ] ::1 /tenyears/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_web [ RunTime:0.007355s ]
+SQL: SELECT * FROM `ten_web`  [ RunTime:0.000292s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012195s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012235s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000335s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000359s ]
+
+[ 2017-09-09T13:29:48+08:00 ] ::1 /tenyears/index.php/home/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_6eiaqucvso47q2mnpamhqi8r34, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_users [ RunTime:0.016413s ]
+SQL: SELECT * FROM `ten_users` WHERE ( `email` = 'admin@admin.me' ) AND ( `userpwd` = 'e10adc3949ba59abbe56e057f20f883e' )  [ RunTime:0.000671s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000921s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000990s ]
+
+[ 2017-09-09T13:30:30+08:00 ] ::1 /tenyears/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000297s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_is34meckqeh6a8qjslgblv17n0, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_web [ RunTime:0.012723s ]
+SQL: SELECT * FROM `ten_web`  [ RunTime:0.000294s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019375s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000213s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000570s ]
+
+[ 2017-09-09T13:30:44+08:00 ] ::1 /tenyears/index.php/home/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000303s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_is34meckqeh6a8qjslgblv17n0, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+SQL: DESCRIBE ten_users [ RunTime:0.016021s ]
+SQL: SELECT * FROM `ten_users` WHERE ( `email` = 'admin@admin.me' ) AND ( `userpwd` = 'e10adc3949ba59abbe56e057f20f883e' )  [ RunTime:0.000624s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000801s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000879s ]
+
+[ 2017-09-09T13:30:45+08:00 ] ::1 /tenyears/index.php/home/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+NOTIC: [2] session_start(): open(C:\WINDOWS\sess_is34meckqeh6a8qjslgblv17n0, O_RDWR) failed: Permission denied (13) D:\phpStudy\WWW\tenyears\ThinkPHP\Common\functions.php 第 1168 行.
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 12 行.
+SQL: DESCRIBE ten_users [ RunTime:0.012239s ]
+SQL: SELECT * FROM `ten_users` WHERE ( id='' ) LIMIT 1   [ RunTime:0.000288s ]
+SQL: DESCRIBE ten_dreams [ RunTime:0.006903s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ten_dreams` WHERE ( uid='' ) LIMIT 1   [ RunTime:0.000206s ]
+SQL: DESCRIBE ten_dmideas [ RunTime:0.007273s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ten_dmideas` WHERE ( uid='' ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: DESCRIBE ten_dmpics [ RunTime:0.008114s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ten_dmpics` WHERE ( uid='' ) LIMIT 1   [ RunTime:0.000221s ]
+SQL: SELECT `admirenum` FROM `ten_dreams` WHERE ( uid='' and admirenum > 0 )  [ RunTime:0.000169s ]
+SQL: SELECT `admirenum` FROM `ten_dmideas` WHERE ( uid='' and admirenum > 0 )  [ RunTime:0.000156s ]
+SQL: SELECT `admirenum` FROM `ten_dmpics` WHERE ( uid='' and admirenum > 0 )  [ RunTime:0.000143s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 43 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 46 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 49 行.
+SQL: SELECT * FROM `ten_dreams` WHERE ( uid='' ) ORDER BY id desc  [ RunTime:0.000182s ]
+SQL: DESCRIBE ten_follow [ RunTime:0.007384s ]
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 60 行.
+SQL: SELECT `followed` FROM `ten_follow` WHERE ( followers='' )  [ RunTime:0.000265s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 61 行.
+NOTIC: [8] Undefined variable: flist D:\phpStudy\WWW\tenyears\Application\Home\Controller\UserController.class.php 第 64 行.
+SQL: SELECT * FROM `ten_dreams` WHERE ( uid='' ) ORDER BY id desc LIMIT 1   [ RunTime:0.000345s ]
+SQL: SELECT * FROM `ten_dmpics` WHERE ( did='' ) ORDER BY id desc  [ RunTime:0.000289s ]
+SQL: SELECT * FROM `ten_dmideas` WHERE ( did='' ) ORDER BY id desc  [ RunTime:0.000243s ]
+SQL: DESCRIBE ten_ideacomments [ RunTime:0.007190s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ten_ideacomments` WHERE ( 13 = ten_ideacomments.iid ) LIMIT 1   [ RunTime:0.000221s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000209s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 283 行.
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 284 行.
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 285 行.
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 310 行.
+NOTIC: [8] Undefined index: users D:\phpStudy\WWW\tenyears\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 344 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031906s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031958s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000337s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000367s ]
+

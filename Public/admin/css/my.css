@@ -1,0 +1,16 @@
+body{
+	background: #ffffff;
+}
+.form-left{
+	margin-top: 10px;
+	margin-left: 627px;
+}
+.table th{
+	text-align: center;
+	line-height: 30px;
+}
+
+.table td{
+	text-align: center;
+	line-height: 30px;
+}
